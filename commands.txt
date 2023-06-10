@@ -1,0 +1,21 @@
+docker login -u dewrat 
+docker image ls
+docker image ls
+docker pull nginx
+docker image ls
+docker pull python
+docker container ls -a
+docker ps -a
+docker container rm omghumre
+docker run -it --name deweb -p 8080:80 -d nginx
+
+-----ENTER CONTAINER-----
+docker exec -it deweb /bin//bash
+
+-----INSIDE CONTAINER-----
+cat /etc/os-release
+
+-----EXIT CONTAINER-----
+exit
+
+

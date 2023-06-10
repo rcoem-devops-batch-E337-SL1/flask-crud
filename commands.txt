@@ -6,8 +6,9 @@ docker image ls
 docker pull python
 docker container ls -a
 docker ps -a
-docker container rm omghumre
 docker run -it --name deweb -p 8080:80 -d nginx
+docker container stop deweb
+docker container rm deweb
 
 -----ENTER CONTAINER-----
 docker exec -it deweb /bin//bash
@@ -17,5 +18,27 @@ cat /etc/os-release
 
 -----EXIT CONTAINER-----
 exit
+
+docker build -t dewrat/flask-crud:v1 .
+docker push dewrat/flask-crud:v1
+docker run -it --name flask -p 8080:80 -d dewrat/flask-crud:v1   //becasue this command was running on onn port 5000 so we used it to make it default 
+docker run -it --name flask -p 8090:5000 -d dewrat/flask-crud:v1
+
+
+
+
+
+
+git add .
+
+git commit -m "commands"
+
+git push -u origin main
+
+
+
+
+
+
 
 
